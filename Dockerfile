@@ -15,4 +15,5 @@ RUN mkdir build &&\
     make
 
 EXPOSE 80
+EXPOSE 8080
 CMD ["/opt/$PROJECT_NAME/build/TP_http_server"]
