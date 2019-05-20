@@ -2,7 +2,7 @@ FROM ubuntu:18.10
 MAINTAINER mitrkos
 USER root
 
-RUN apt-get -y update && apt-get install -y wget cmake g++
+RUN apt-get -y update && apt-get install -y wget cmake g++ libevent-dev
 
 ENV PROJECT_NAME server
 
@@ -16,4 +16,3 @@ RUN mkdir build &&\
 
 EXPOSE 80
 CMD ["/opt/$PROJECT_NAME/build/TP_http_server"]
-
