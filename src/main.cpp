@@ -1,8 +1,9 @@
 #include "server/server.h"
+#include "logger/logger.h"
 
 
 int main() {
-    system("pwd");
+    logger.off();
     config server_config;
     server_config.parse_config();
     server file_server(server_config);

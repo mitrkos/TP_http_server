@@ -13,6 +13,10 @@ public:
         return l;
     }
 
+    void off() {
+        is_on = false;
+    }
+
     logger(logger const&) = delete;
     logger(logger&&) = delete;
     void operator=(logger const&) = delete;
@@ -20,23 +24,23 @@ public:
 
     template <typename T>
     void info(const T& message) {
-        console->info(message);
+        if (is_on) console->info(message);
     }
     template <typename T>
     void warn(const T& message) {
-        console->warn(message);
+        if (is_on) console->warn(message);
     }
     template <typename T>
     void error(const T& message) {
-        console->error(message);
+        if (is_on) console->error(message);
     }
     template <typename T>
     void critical(const T& message) {
-        console->critical(message);
+        if (is_on) console->critical(message);
     }
     template <typename T>
     void debug(const T& message) {
-        console->debug(message);
+        if (is_on) console->debug(message);
     }
 
 private:
@@ -51,6 +55,7 @@ private:
     }
 
     std::shared_ptr<spdlog::logger> console;
+    bool is_on = true;
 };
 
 

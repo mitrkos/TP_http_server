@@ -9,7 +9,7 @@
 /*Buffer of DATE header*/
 #define TIME_BUFSIZE 1024
 /* Port to listen on. */
-#define DEFAULT_SERVER_PORT 8080
+#define DEFAULT_SERVER_PORT 80
 /* Number of worker threads.*/
 #define DEFAULT_THREADS_LIMIT 196
 /* Number of worker threads.*/
