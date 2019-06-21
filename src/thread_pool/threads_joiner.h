@@ -9,11 +9,11 @@ namespace thread_pool {
 
 class threads_joiner {
 public:
-    explicit threads_joiner(std::vector<std::thread> &threads_) :
+    explicit threads_joiner(std::vector<std::thread>& threads_) :
             threads(threads_) {}
 
     ~threads_joiner() {
-        for (auto &thread: threads) {
+        for (auto& thread: threads) {
             if (thread.joinable()) {
                 thread.join();
             }
@@ -21,7 +21,7 @@ public:
     }
 
 private:
-    std::vector<std::thread> &threads;
+    std::vector<std::thread>& threads;
 };
 
 } // thread_pool

@@ -1,20 +1,22 @@
 #pragma once
 
+#include <string>
+
 /*Buffer of line in request*/
-#define  LINE_BUFSIZE 256
+const size_t LINE_BUFSIZE = 256;
 /*Buffer of response page*/
-#define RESPONSE_BUFSIZE 1024
+const size_t RESPONSE_BUFSIZE = 1024;
 /*Buffer of request page*/
-#define REQUEST_BUFSIZE 1024
+const size_t REQUEST_BUFSIZE = 1024;
 /*Buffer of DATE header*/
-#define TIME_BUFSIZE 1024
+const size_t TIME_BUFSIZE = 1024;
 /* Port to listen on. */
-#define DEFAULT_SERVER_PORT 80
+const size_t DEFAULT_SERVER_PORT = 8080;
 /* Number of worker threads.*/
-#define DEFAULT_THREADS_LIMIT 196
+const size_t DEFAULT_THREADS_LIMIT = 196;
 /* Number of worker threads.*/
-#define DEFAULT_CPU_LIMIT 4
+const size_t DEFAULT_CPU_LIMIT = 4;
 
-#define DEFAULT_DOCUMENT_ROOT "."
+const std::string DEFAULT_DOCUMENT_ROOT = ".";
 
-#define CONFIG_PATH "/etc/httpd.conf"
+const std::string CONFIG_PATH = "/etc/httpd.conf";
