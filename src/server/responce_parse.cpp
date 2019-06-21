@@ -11,7 +11,7 @@
 #include <sys/wait.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include "libevent/event2/buffer.h"
+#include <event2/buffer.h>
 
 #include "responce_parse.h"
 #include "../logger/logger.h"

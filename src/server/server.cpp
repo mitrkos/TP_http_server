@@ -1,14 +1,14 @@
 #include <err.h>
 #include <sys/types.h>
 
+#include <event2/bufferevent.h>
+#include <event2/buffer.h>
+#include <event2/event.h>
+#include <event2/listener.h>
+
 #include "default_consts.h"
 #include "http_head.h"
 #include "responce_parse.h"
-#include "libevent/event2/bufferevent.h"
-#include "libevent/event2/buffer.h"
-#include "libevent/event2/event.h"
-#include "libevent/event2/listener.h"
-#include "libevent/evrpc.h"
 #include "server.h"
 #include "../logger/logger.h"
 

@@ -4,8 +4,6 @@
 #include <string.h>
 
 #include "default_consts.h"
-#include "libevent/event2/rpc.h"
-
 
 #define ALL_OK 1
 #define NOT_ALLOWED_HTTP_METHOD -1
