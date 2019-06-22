@@ -11,7 +11,7 @@ const size_t REQUEST_BUFSIZE = 1024;
 /*Buffer of DATE header*/
 const size_t TIME_BUFSIZE = 1024;
 /* Port to listen on. */
-const size_t DEFAULT_SERVER_PORT = 8080;
+const size_t DEFAULT_SERVER_PORT = 80;
 /* Number of worker threads.*/
 const size_t DEFAULT_THREADS_LIMIT = 196;
 /* Number of worker threads.*/
