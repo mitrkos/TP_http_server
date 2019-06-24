@@ -147,6 +147,11 @@ void on_accept(struct evconnlistener *listener,
         throw std::runtime_error("Can't allocate client out buffer");
     }
 
+    if (evbuffer_set_flags(client->output_buffer, EVBUFFER_FLAG_DRAINS_TO_FD)!= 0) {
+        logger.error("Can't set flag EVBUFFER_FLAG_DRAINS_TO_FD to client out buffer");
+        throw std::runtime_error("Can't set flag EVBUFFER_FLAG_DRAINS_TO_FD to client out buffer");
+    }
+
     if ((client->evbase = event_base_new()) == nullptr) {
         logger.error("Can't create client event_base");
         throw std::runtime_error("Can't create client event_base");
